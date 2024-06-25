@@ -1,0 +1,42 @@
+pip install django
+
+let's create a new Django project and app:
+django-admin startproject time_project
+cd time_project
+
+#app creation
+python manage.py startapp time_app
+
+#navigate to the time_project/time_app directory and open views.py. 
+Add the following code to define a view that will display the current time and date
+
+from django.http import HttpResponse
+from datetime import datetime
+
+def current_datetime(request):
+    now = datetime.now()
+    html = "<html><body>Current date and time: {}</body></html>".format(now)
+    return HttpResponse(html)
+
+
+#Open time_project/time_project/urls.py and include the time_app URLs:
+from django.contrib import admin
+from django.urls import path, include
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('time/', include('time_app.urls')),
+]
+
+#Create a new file called urls.py inside the time_app directory and add the following code
+from django.urls import path
+from . import views
+
+urlpatterns = [
+    path('', views.current_datetime, name='current_datetime'),
+]
+
+to run 
+python manage.py runserver
+
+http://127.0.0.1:8000/time/
