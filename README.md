@@ -33,7 +33,7 @@ Each subject has its own directory containing organized notes and study material
 
 To use the notes:
 
-1. Clone the repository to your local machine using `https://github.com/adityahunt/vtuNotes.git`.
+1. Clone the repository to your local machine using `https://github.com/Anish202020/6th-Semester`.
 2. Navigate to the directory of the subject you're interested in.
 3. Open the relevant notes files (PDF, DOCX, MD) to study.
 
