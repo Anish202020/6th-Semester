@@ -1,0 +1,5 @@
+For virtual environment to create
+py -m venv virtualenv
+
+To activate
+. virtualenv/Scripts/activate
