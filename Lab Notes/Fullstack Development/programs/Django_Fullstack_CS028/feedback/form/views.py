@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import FeedbackForm
+from .forms import FeedbackForm
 
 
 def feedback_form(request):
