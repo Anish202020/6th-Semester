@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Fruit List</title>
+  </head>
+  <body>
+    <h1>Unordered List of Fruits</h1>
+    <ul>
+      {% for fruit in fruits %}
+      <li>{{ fruit.name }}</li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>
