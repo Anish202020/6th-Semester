@@ -1,7 +1,7 @@
 package module2_generic;
-class Stats<T extends Number>{
+class Statss<T extends Number>{
 	T[] nums;
-	Stats(T[] o){
+	Statss(T[] o){
 		nums = o;
 	}
 	double average() {
@@ -11,7 +11,7 @@ class Stats<T extends Number>{
 		}
 		return sum/nums.length;
 	}
-	boolean sameAvg(Stats<?> ob) {
+	boolean sameAvg(Statss<?> ob) {
 		if(average()== ob.average())
 			return true;
 		return false;
@@ -22,17 +22,17 @@ public class WildcardDemo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		Integer inums[] = {1,2,3,4,5};
-		Stats<Integer>iob=new Stats<Integer>(inums);
+		Statss<Integer>iob=new Statss<Integer>(inums);
 		double v = iob.average();
 		System.out.println("iob average is "+v);
 		
 		Double dnums[] = {1.1,2.2,3.3,4.4,5.5};
-		Stats<Double>dob=new Stats<Double>(dnums);
+		Statss<Double>dob=new Statss<Double>(dnums);
 		double v1 = dob.average();
 		System.out.println("dob average is "+v1);
 		
 		Float fnums[] = {1.1F,2.2F,3.3F,4.4F,5.5F};
-		Stats<Float>fob=new Stats<Float>(fnums);
+		Statss<Float>fob=new Statss<Float>(fnums);
 		double v2 = fob.average();
 		System.out.println("fob average is "+v2);
 		
