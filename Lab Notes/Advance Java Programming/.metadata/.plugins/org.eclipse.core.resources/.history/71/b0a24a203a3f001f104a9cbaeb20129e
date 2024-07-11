@@ -1,0 +1,160 @@
+package module3_strings;
+
+class Student{
+	int rollno;
+	String name;
+	String city;
+	Student(int rollno, String name, String city){
+		this.rollno=rollno;
+		this.name=name;
+		this.city=city;
+	}
+	public String toString(){
+		return rollno+" "+name+" "+city;
+	}
+
+
+
+public class StringOperations {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Creation of String		
+		char chars[] = { 'a', 'b', 'c', 'd', 'e', 'f' };
+		String s = new String(chars, 2, 3);
+		System.out.println("Value of s is "+ s);
+		
+		// Creation of String with ASCII Value
+		byte ascii[] = {65, 66, 67, 68, 69, 70 };
+		String s1 = new String(ascii);
+		System.out.println(s1);
+		
+		// Concatenation by "+"		
+		String s2="ACIT" +"Engineering";
+		System.out.println(s2);
+		
+		// Concatenation by concat()	
+		String s3="Acharya ";
+		String s4=" Institute";
+		String s5=s3.concat(s4);
+		System.out.println(s5);
+		
+		// For toString() method
+		Student s6 =new Student(101,"Raj","lucknow");
+		System.out.println(s6);
+		
+		// For CharAt()
+		String name="Acharya";
+		char ch=name.charAt(4);
+		System.out.println(ch);
+		
+		// For getChars()		
+		String str = new String("Hello Kumar how r u");
+		char[] ch1 = new char[10];
+		str.getChars(6, 16, ch1, 0);
+		System.out.println(ch);
+		
+		//	For getBytes()	
+		String s7="ABCDEFG";
+		byte[] barr=s7.getBytes();
+		for(int i=0;i<barr.length;i++){
+			System.out.println(barr[i]);
+		}
+		
+		// For toCharArray()		
+		String s8="hello";
+		char[] ch2=s8.toCharArray();
+		for(int i=0;i<ch2.length;i++) {
+			System.out.println(ch2[i]); 
+		}
+		
+		// For equals() and equalsIgnoreCase()
+		String s9="Kumar";
+		String s10="KUMAR";
+		System.out.println(s9.equals(s10));
+		System.out.println(s9.equalsIgnoreCase(s10)); 
+		
+		//	For "==" method	
+		String s11="Kumar";
+		String s12=new String("Kumaa");
+		System.out.println(s11==s12);
+		
+		// For compareTo() method
+		String s13="Sachin";
+		String s14="Ratan";
+		System.out.println(s13.compareTo(s14));
+		
+		// For startsWith() method
+		String s15="java string split method";
+		System.out.println(s15.startsWith("java string"));
+		
+		// For endsWith() method
+		String s16="Acharya Institute of technology";
+		System.out.println(s16.endsWith("yt"));
+		
+		// For indexOf() method
+		String s17="this is index of example";
+		int index1=s17.indexOf("is");
+		int index2=s17.indexOf("index");
+		System.out.println(index1+" "+index2);
+		
+		// For lastIndexOf() method	
+		String s18="this is index of example";
+		index1=s18.lastIndexOf('s');
+		System.out.println(index1);
+		
+		// For substring() method	
+		String s19="SachinTendulkar";
+		System.out.println(s19.substring(6));
+		System.out.println(s19.substring(0,6));
+
+		// For replaceString() method
+		String s20="AST is a very good college";
+		String replaceString=s20.replace('S','I');
+		System.out.println(replaceString);
+
+		// For replace() method
+		String s21="my name is ABC my name is college";
+		String replace1 =s21.replace("is","was");
+		System.out.println(replace1);
+		
+		// For trim() method		
+		String s22=" hello string ";
+		System.out.println(s22+"java");
+		System.out.println(s22.trim()+"java");
+
+		// For toLowerCase() and toUpperCase() method
+		String string1="Acharya Institute of Technology";
+		String s1lower=string1.toLowerCase();
+		System.out.println(s1lower);
+		String s1upper=string1.toUpperCase();
+		System.out.println(s1upper);
+		
+		// For StringBuffer() with append() method
+		StringBuffer sb=new StringBuffer("Hello ");
+		sb.append("AIT");
+		System.out.println(sb);
+
+		// For StringBuffer() with insert() method
+		StringBuffer sb1=new StringBuffer("Hello ");
+		sb1.insert(1,"AIT");
+		System.out.println(sb1);
+		
+		// For StringBuffer() with replace() method
+		StringBuffer sb2=new StringBuffer(" Hello World ");
+		sb2.replace( 6, 11, "java");
+		System.out.println(sb2); 
+
+		// For StringBuffer() with delete() and deleteCharAt() method
+		StringBuffer sb4=new StringBuffer("Hello");
+		sb4.delete(1,3);
+		System.out.println(sb4);
+		
+		StringBuffer sb5=new StringBuffer("This is a Test");
+		sb5.deleteCharAt(3);
+		System.out.println(sb5);
+		
+	}
+
+}
+}

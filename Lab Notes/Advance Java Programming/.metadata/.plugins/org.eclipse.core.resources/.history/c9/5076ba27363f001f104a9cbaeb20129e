@@ -1,0 +1,13 @@
+package module3_strings;
+
+public class StringOperations {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		char chars[] = { 'a', 'b', 'c', 'd', 'e', 'f' };
+		String s = new String(chars, 2, 3);
+		System.out.println("Value of s is "+ s);
+	}
+
+}

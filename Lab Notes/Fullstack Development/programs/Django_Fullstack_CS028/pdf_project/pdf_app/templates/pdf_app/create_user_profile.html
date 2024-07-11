@@ -11,7 +11,7 @@
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Add Book</button>
+        <button class='btn btn-primary m-1' type="submit">Add Book</button>
     </form>
     <p><a href="{% url 'generate_pdf' %}" download>Download Book Catalog (PDF)</a></p>
 <br>

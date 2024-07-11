@@ -1,0 +1,60 @@
+package module3_strings;
+
+class Student{
+	int rollno;
+	String name;
+	String city;
+	Student(int rollno, String name, String city){
+		this.rollno=rollno;
+		this.name=name;
+		this.city=city;
+	}
+	public String toString(){
+		return rollno+" "+name+" "+city;
+	}
+
+
+
+public class StringOperations {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// Creation of String		
+		char chars[] = { 'a', 'b', 'c', 'd', 'e', 'f' };
+		String s = new String(chars, 2, 3);
+		System.out.println("Value of s is "+ s);
+		
+		// Creation of String with ASCII Value
+		byte ascii[] = {65, 66, 67, 68, 69, 70 };
+		String s1 = new String(ascii);
+		System.out.println(s1);
+		
+		// Concatenation by "+"		
+		String s2="ACIT" +"Engineering";
+		System.out.println(s2);
+		
+		// Concatenation by concat()	
+		String s3="Acharya ";
+		String s4=" Institute";
+		String s5=s3.concat(s4);
+		System.out.println(s5);
+		
+		// For to String method
+		Student s6 =new Student(101,"Raj","lucknow");
+		System.out.println(s6);
+		
+		// For CharAt
+		String name="Acharya";
+		char ch=name.charAt(4);
+		System.out.println(ch);
+		
+		// For getChars		
+		String str = new String("Hello Kumar how r u");
+		char[] ch1 = new char[10];
+		str.getChars(6, 16, ch1, 0);
+		System.out.println(ch);
+		
+	}
+
+}
+}

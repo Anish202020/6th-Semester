@@ -1,0 +1,10 @@
+package module3_strings;
+
+public class StringOperations {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
