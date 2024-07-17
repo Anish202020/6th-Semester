@@ -8,5 +8,5 @@ class Employee(models.Model):
     mobile = models.CharField(max_length=10)  
     email = models.EmailField()  
   
-    def _str_(self):  
-        return "%s %s" % (self.first_name, self.last_name)
+    def __str__(self):  
+        return "%s %s" % (self.first_name, self.last_name)  
