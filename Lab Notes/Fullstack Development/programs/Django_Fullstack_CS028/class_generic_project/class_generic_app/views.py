@@ -11,21 +11,21 @@ class EmployeeCreate(CreateView):
     model = Employee  
   
     fields = '__all__'  
-    success_url = reverse_lazy('sampleapp: EmployeeRetrieve')  
+    success_url = reverse_lazy('class_generic_app: EmployeeRetrieve')  
   
 class EmployeeRetrieve(ListView):  
     model = Employee  
-    success_url = reverse_lazy('sampleapp: EmployeeRetrieve')  
+    success_url = reverse_lazy('class_generic_app: EmployeeRetrieve')  
   
 class EmployeeDetail(DetailView):  
     model = Employee  
-    success_url = reverse_lazy('sampleapp: EmployeeRetrieve')  
+    success_url = reverse_lazy('class_generic_app: EmployeeRetrieve')  
   
 class EmployeeUpdate(UpdateView):  
     model = Employee  
     template_name_suffix = '_update_form'  
     fields = '__all__'  
-    success_url = reverse_lazy('sampleapp: EmployeeRetrieve')  
+    success_url = reverse_lazy('class_generic_app: EmployeeRetrieve')  
       
     # def get_success_url(self):  
           
