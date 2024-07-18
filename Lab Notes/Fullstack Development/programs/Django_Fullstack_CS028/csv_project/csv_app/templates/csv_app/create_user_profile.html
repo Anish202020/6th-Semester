@@ -1,0 +1,36 @@
+<!DOCTYPE html> 
+
+<html lang="en"> 
+<head> 
+
+    <meta charset="UTF-8"> 
+
+    <title>Generate PDF</title> 
+
+</head> 
+<body> 
+
+    <h1>Generate and Download CSV</h1> 
+
+    <h2>Add a New Book</h2> 
+
+    <form method="post"> 
+
+        {% csrf_token %} 
+
+        {{ form.as_p }} 
+
+        <button type="submit">Add Book</button> 
+
+    </form> 
+
+    <!-- <p><a href="{% url 'home' %}" download>Download Book Catalog (PDF)</a></p> --> 
+
+    <p><a href="{% url 'generate_csv' %}" download>Download Book Catalog (CSV)</a></p> 
+<br> 
+
+  
+
+</body> 
+
+</html> 
