@@ -26,7 +26,7 @@ def home(request):
 
         form = BookForm() 
 
-    return render(request, 'myapp/create_user_profile.html', {'form': form}) 
+    return render(request, 'csv_app/create_user_profile.html', {'form': form}) 
 
   
 # csvapp/views.py 
