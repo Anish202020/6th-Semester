@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Student Registration</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body>
+    <h2>Student Registration</h2>
+    <form id="registrationForm" method="POST">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Register</button>
+    </form>
+    <div id="successMessage" style="display: none">
+      <p>Registration successful!</p>
+    </div>
+    <div id="errorMessage" style="display: none">
+      <p>There were errors in your form:</p>
+      <ul id="errorList"></ul>
+    </div>
+    <script>
+      $(document).ready(function () {
+        $("#registrationForm").on("submit", function (event) {
+          event.preventDefault();
+          $.ajax({
+            type: "POST",
+            url: "",
+            data: $(this).serialize(),
+            success: function (response) {
+              if (response.success) {
+                $("#registrationForm")[0].reset();
+                $("#successMessage").show();
+                $("#errorMessage").hide();
+              } else {
+                $("#errorMessage").show();
+                $("#errorList").empty();
+                $.each(response.errors, function (key, value) {
+                  $("#errorList").append("<li>" + key + ": " + value + "</li>");
+                });
+              }
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
